@@ -74,3 +74,24 @@ function createSpeakers() {
 }
 
 createSpeakers();
+
+showMore.addEventListener('click', () => {
+  speakerContainer.classList.toggle('hide');
+});
+
+ScrollReveal({
+  distance: '60px',
+  duration: 2800,
+  delay: 400,
+});
+
+ScrollReveal().reveal('.headline-content', {
+  delay: 100,
+  origin: 'bottom',
+});
+ScrollReveal().reveal('.card, .feat-card', {
+  delay: 100,
+  origin: 'bottom',
+  interval: 200,
+});
+ScrollReveal().reveal('.caption', { delay: 300, origin: 'left' });
