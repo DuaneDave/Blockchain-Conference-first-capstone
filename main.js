@@ -75,8 +75,18 @@ function createSpeakers() {
 
 createSpeakers();
 
-showMore.addEventListener('click', () => {
+const box = document.querySelector('#chevron');
+
+showMore.addEventListener('click', (e) => {
+  e.preventDefault();
   speakerContainer.classList.toggle('hide');
+  const check = showMore.classList.contains('hide');
+
+  if (!showMore.textContent.includes('Show More')) {
+    showMore.innerText = 'Show More';
+  } else {
+    showMore.innerText = 'Show Less';
+  }
 });
 
 ScrollReveal({
