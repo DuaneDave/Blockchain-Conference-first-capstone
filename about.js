@@ -24,16 +24,3 @@ window.addEventListener('scroll', () => {
     scrollToTop.classList.remove('fade');
   }
 });
-
-ScrollReveal({
-  distance: '60px',
-  duration: 2800,
-  delay: 400,
-});
-
-ScrollReveal().reveal('.headline-content', { delay: 100, origin: 'bottom' });
-ScrollReveal().reveal('.img', {
-  delay: 200,
-  origin: 'bottom',
-});
-ScrollReveal().reveal('.caption', { delay: 300, origin: 'left' });
