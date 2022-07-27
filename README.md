@@ -21,7 +21,7 @@ This is the first Microverse capstone project meant to summarize all the content
 
 To get a local copy up and run:
 
-- git clone git@github.com:nickEmma/Capstone-Project-1.git in your terminal
+- git clone https://github.com/DuaneDave/Blockchain-Conference-first-capstone/tree/Wip-Feat in your terminal
 
 ### Prerequisites
 
