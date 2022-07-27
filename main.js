@@ -3,6 +3,7 @@ const hamburger = document.querySelector('.hamburger');
 const linkAction = document.querySelectorAll('.nav-link');
 const speakerContainer = document.querySelector('.feat-speaker');
 const showMore = document.querySelector('#show-more');
+const scrollToTop = document.querySelector('.scroll-to-top');
 
 hamburger.addEventListener('click', () => {
   slide.classList.toggle('slide');
@@ -86,6 +87,14 @@ showMore.addEventListener('click', (e) => {
     showMore.innerText = 'Show More';
   } else {
     showMore.innerText = 'Show Less';
+  }
+});
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 200) {
+    scrollToTop.classList.add('fade');
+  } else {
+    scrollToTop.classList.remove('fade');
   }
 });
 

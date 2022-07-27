@@ -17,6 +17,7 @@
 }
 
 body {
+  scroll-behavior: smooth;
   font-family: var(--primary-font);
   color: var(--primary-color);
   overflow-x: hidden;
@@ -36,10 +37,6 @@ ul {
 /* === UTILITY CLASES === */
 .flex {
   display: flex;
-}
-
-.grid {
-  display: grid;
 }
 
 h1,
@@ -228,9 +225,18 @@ i {
   color: #272a31f5;
 }
 
-.about.date h2 {
+.about.date a {
   font-size: 1.2rem;
   font-weight: 700;
+  text-decoration: underline;
+  justify-content: center;
+  position: relative;
+}
+
+.about.date a i {
+  position: absolute;
+  bottom: 2px;
+  font-size: 1rem;
 }
 
 .about-info {
@@ -384,17 +390,16 @@ i {
 }
 
 .card {
-  flex-direction: column;
   background-color: #47474980;
   align-items: center;
   padding: 1em;
-  row-gap: 0.3rem;
-  width: 190px;
+  row-gap: 0.5rem;
+  column-gap: 1rem;
+  width: 100%;
   border-radius: 7px;
   box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.479);
-  justify-content: space-evenly;
+  justify-content: flex-start;
   transition: transform 0.5s ease;
-  text-align: center;
 }
 
 .card i {
@@ -408,8 +413,7 @@ i {
 
 .card .tag-detail {
   font-size: 14px;
-  line-height: 1.1rem;
-  padding: 0.2em;
+  line-height: 1rem;
 }
 
 .card:hover {
@@ -425,6 +429,16 @@ i {
 
 .see-prog {
   color: rgba(255, 255, 255, 0.548);
+  text-decoration: underline;
+  display: none;
+}
+
+.mobile {
+  color: white;
+  text-decoration: none;
+  background-color: var(--accent-color);
+  padding: 1em;
+  margin-top: 1.5rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -438,6 +452,14 @@ i {
   .card p {
     font: 1rem;
     text-align: center;
+  }
+
+  .see-prog {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
   }
 }
 
@@ -521,6 +543,11 @@ i {
     row-gap: 3rem;
     max-width: 968px;
     flex-wrap: wrap;
+    height: auto;
+  }
+
+  #show-more {
+    display: none;
   }
 }
 
@@ -629,6 +656,26 @@ i {
 
 .block {
   color: var(--accent-color);
+}
+
+.scroll-to-top {
+  background-color: rgba(0, 0, 0, 0.993);
+  position: fixed;
+  border-radius: 10px;
+  bottom: 4rem;
+  right: 5%;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.scroll-to-top.fade {
+  display: block;
+}
+
+.scroll-to-top a i {
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
 }
 
 @media screen and (min-width: 768px) {
