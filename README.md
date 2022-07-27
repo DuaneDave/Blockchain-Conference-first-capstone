@@ -1,5 +1,8 @@
 # capstone-project
 
+![screenshot](asset/desktop.png)
+![screenshot](asset/mobile.png)
+
 ## Description the project.
 
 This is the first Microverse capstone project meant to summarize all the content learned through module 1. The objective was to mimic the appearance of a landing page, in a similar way a web developer would receive the requirements in a job.
@@ -48,6 +51,7 @@ You're free to use this project however you like it for educational purposes. Ju
 ### LIVE DEMO
 
 Check the live demo here [LINK](https://duanedave.github.io/Blockchain-Conference-first-capstone/)
+[Project presentation](https://www.loom.com/share/4b86fc0ecbf64f799a5526eb17bd0654)
 
 ## Authors
 
