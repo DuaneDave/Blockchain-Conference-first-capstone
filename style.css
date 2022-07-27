@@ -186,6 +186,7 @@ i {
   background-size: contain;
   align-items: center;
   justify-content: unset;
+  height: 80%;
 }
 
 .about.headline-content {
@@ -237,6 +238,7 @@ i {
   flex-direction: column;
   align-items: center;
   padding: 1em 3em;
+  margin-top: 1rem;
 }
 
 .about-info.space {
@@ -244,7 +246,7 @@ i {
 }
 
 .b-logo {
-  padding: 4em;
+  padding: 1em;
   outline: 1px solid rgba(0, 0, 0, 0.212);
   margin-top: 2rem;
 }
@@ -315,6 +317,10 @@ i {
 
   .headline-content {
     width: 700px;
+  }
+
+  .b-logo {
+    padding: 4em;
   }
 }
 
@@ -402,9 +408,8 @@ i {
 
 .card .tag-detail {
   font-size: 14px;
-  line-height: 1.2rem;
-  padding: 0.5em;
-  text-align: justify;
+  line-height: 1.1rem;
+  padding: 0.2em;
 }
 
 .card:hover {
@@ -563,9 +568,10 @@ i {
   margin-top: 1.5rem;
 }
 
-.events .event- {
-  width: 400px;
+.img .event-pic {
   height: 280px;
+  width: 100%;
+  max-width: 400px;
 }
 
 .event-info {
