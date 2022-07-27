@@ -233,7 +233,7 @@ i {
   position: relative;
 }
 
-.about.date a i {
+.about.date a .bxs-chevron-right {
   position: absolute;
   bottom: 2px;
   font-size: 1rem;
