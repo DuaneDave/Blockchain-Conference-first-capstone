@@ -16,8 +16,11 @@
   box-sizing: border-box;
 }
 
-body {
+html {
   scroll-behavior: smooth;
+}
+
+body {
   font-family: var(--primary-font);
   color: var(--primary-color);
   overflow-x: hidden;
