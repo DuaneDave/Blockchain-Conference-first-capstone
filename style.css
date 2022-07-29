@@ -833,3 +833,9 @@ form input:focus {
     opacity: 1;
   }
 }
+
+@media (max-width: 500px) {
+  .register {
+    width: 350px;
+  }
+}
