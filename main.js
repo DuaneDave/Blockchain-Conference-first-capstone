@@ -94,3 +94,33 @@ window.addEventListener('scroll', () => {
     scrollToTop.classList.remove('fade');
   }
 });
+
+const layer = document.querySelector('#layer');
+const btnClose = document.querySelector('.bx-x');
+const regDetails = document.querySelector('.register');
+const btnJoin = document.querySelector('#join');
+
+btnJoin.addEventListener('click', () => {
+  layer.classList.add('layer');
+  regDetails.classList.add('off');
+});
+
+btnClose.addEventListener('click', () => {
+  layer.classList.remove('layer');
+  regDetails.classList.remove('off');
+});
+
+const form = document.querySelector('#form');
+const email = document.querySelector('#email');
+const errorMsg = document.querySelector('.error');
+
+form.addEventListener('submit', (e) => {
+  const eError = email.value;
+  const fError = email.value;
+  if (!eError || !fError) {
+    errorMsg.innerText = "Field can't be empty";
+    e.preventDefault();
+  } else {
+    form.submit();
+  }
+});
