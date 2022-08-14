@@ -111,16 +111,26 @@ btnClose.addEventListener('click', () => {
 });
 
 const form = document.querySelector('#form');
-const email = document.querySelector('#email');
-const errorMsg = document.querySelector('.error');
+const submit = document.querySelector('.btn-submit');
+const placeholder = document.querySelector('#on-success');
+
+const update = () => {
+  submit.addEventListener('click', () => {
+    placeholder.innerHTML = `
+      <i class="bx bx-check"></i>
+      <h2 class="success">
+        Cheers! we reserved a spot for you in the BlockChain 2022 Summit
+      </h2>
+      `;
+  });
+};
 
 form.addEventListener('submit', (e) => {
-  const eError = email.value;
-  const fError = email.value;
-  if (!eError || !fError) {
-    errorMsg.innerText = "Field can't be empty";
-    e.preventDefault();
-  } else {
-    form.submit();
-  }
+  e.preventDefault();
+  update();
+
+  setTimeout(() => {
+    layer.classList.remove('layer');
+    regDetails.classList.remove('off');
+  }, 4000);
 });

@@ -722,7 +722,6 @@ i {
 
 .register.off {
   transform: translate(-50%, -50%);
-  animation: fadeIn 1s cubic-bezier(0.76, 0.07, 0.08, 0.78);
 }
 
 .register.hide {
@@ -812,30 +811,19 @@ form input:focus {
   text-align: left;
 }
 
-@keyframes fadeIn {
-  0% {
-    transform: translate(100%) scale(0);
-    opacity: 0;
-  }
-
-  40% {
-    transform: translate(-30%, -50%) scale(0.2);
-    opacity: 0.1;
-  }
-
-  80% {
-    transform: translate(-40%) scale(0.6);
-    opacity: 0.4;
-  }
-
-  100% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-  }
-}
-
 @media (max-width: 500px) {
   .register {
     width: 350px;
   }
+}
+
+.bx-check {
+  color: rgb(31, 231, 31);
+  font-size: 8rem;
+  margin-bottom: 1rem;
+}
+
+.success {
+  color: rgb(173, 167, 167);
+  margin-bottom: 3rem;
 }
