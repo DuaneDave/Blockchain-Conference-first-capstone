@@ -691,3 +691,139 @@ i {
     width: 50ch;
   }
 }
+
+/* === POP UP === */
+.layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1500;
+  background-color: rgba(0, 0, 0, 0.329);
+}
+
+.register {
+  background: rgba(0, 0, 0, 0.897);
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(1000%);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 4px 6px 15px #161414a9, -4px -6px 15px #161414a9;
+}
+
+.register.off {
+  transform: translate(-50%, -50%);
+}
+
+.register.hide {
+  display: none;
+}
+
+.register .pop-head {
+  color: var(--accent-color);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.register .bx-x {
+  color: white;
+  position: absolute;
+  font-size: 1.5rem;
+  top: 5%;
+  right: 5%;
+  transition: all 0.5s ease;
+}
+
+.register .bx-x:hover {
+  color: #ec5242;
+  transform: scale(1.5);
+}
+
+form input {
+  width: 100%;
+  margin: 0.8rem 0;
+  padding: 1em 1.5em;
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 30px;
+  color: white;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.651);
+}
+
+form input:focus {
+  transform: scale(1.04);
+  border: 2px solid #ec534277;
+}
+
+.btn-submit {
+  padding: 1em 6em;
+  background-color: transparent;
+  color: white;
+  border: 1px solid #ec5242;
+  border-radius: 30px;
+  margin-top: 2rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-submit:hover {
+  background-color: var(--accent-color);
+}
+
+.btn-submit:active {
+  background-color: var(--accent-color);
+  border: none;
+}
+
+.msg .bx {
+  color: rgba(21, 216, 21, 0.856);
+  font-size: 8rem;
+  margin-bottom: 1rem;
+}
+
+.register .success-msg {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.89);
+  line-height: 1.7;
+}
+
+.error {
+  position: absolute;
+  width: 300px;
+  left: 9.5rem;
+  bottom: 6.5rem;
+  color: rgba(247, 122, 122, 0.76);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+@media (max-width: 500px) {
+  .register {
+    width: 350px;
+  }
+}
+
+.bx-check {
+  color: rgb(31, 231, 31);
+  font-size: 8rem;
+  margin-bottom: 1rem;
+}
+
+.success {
+  color: rgb(173, 167, 167);
+  margin-bottom: 3rem;
+}

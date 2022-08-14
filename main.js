@@ -94,3 +94,43 @@ window.addEventListener('scroll', () => {
     scrollToTop.classList.remove('fade');
   }
 });
+
+const layer = document.querySelector('#layer');
+const btnClose = document.querySelector('.bx-x');
+const regDetails = document.querySelector('.register');
+const btnJoin = document.querySelector('#join');
+
+btnJoin.addEventListener('click', () => {
+  layer.classList.add('layer');
+  regDetails.classList.add('off');
+});
+
+btnClose.addEventListener('click', () => {
+  layer.classList.remove('layer');
+  regDetails.classList.remove('off');
+});
+
+const form = document.querySelector('#form');
+const submit = document.querySelector('.btn-submit');
+const placeholder = document.querySelector('#on-success');
+
+const update = () => {
+  submit.addEventListener('click', () => {
+    placeholder.innerHTML = `
+      <i class="bx bx-check"></i>
+      <h2 class="success">
+        Cheers! we reserved a spot for you in the BlockChain 2022 Summit
+      </h2>
+      `;
+  });
+};
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  update();
+
+  setTimeout(() => {
+    layer.classList.remove('layer');
+    regDetails.classList.remove('off');
+  }, 4000);
+});
