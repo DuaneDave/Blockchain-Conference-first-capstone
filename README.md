@@ -85,4 +85,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This Project Is Not licensed.
+This Project Is licensed by MIT.
