@@ -52,8 +52,8 @@ You're free to use this project however you like it for educational purposes. Ju
 
 ### LIVE DEMO
 
-Check the live demo here [LINK](https://duanedave.github.io/Blockchain-Conference-first-capstone/)
-[Project presentation](https://www.loom.com/share/4b86fc0ecbf64f799a5526eb17bd0654)
+Check the live version [here](https://duanedave.github.io/Blockchain-Conference-first-capstone/)
+Check the live demo [here](https://www.loom.com/share/4b86fc0ecbf64f799a5526eb17bd0654)
 
 ## Authors
 
