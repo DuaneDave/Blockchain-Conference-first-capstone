@@ -1,3 +1,5 @@
+import speakers from './obj.js';
+
 const slide = document.querySelector('.nav-menu');
 const hamburger = document.querySelector('.hamburger');
 const linkAction = document.querySelectorAll('.nav-link');
@@ -10,53 +12,14 @@ hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('slide');
 });
 
-linkAction.forEach((n) => {
-  n.addEventListener('click', () => {
-    linkAction.forEach((n) => n.classList.remove('active'));
-    n.classList.add('active');
+linkAction.forEach((link) => {
+  link.addEventListener('click', () => {
+    linkAction.forEach((link) => link.classList.remove('active'));
+    link.classList.add('active');
     slide.classList.remove('slide');
     hamburger.classList.remove('slide');
   });
 });
-
-const speakers = [
-  {
-    name: 'Vitalik Buterin',
-    carrier: 'Berkman Professor of Enterpreneurial legal Studies',
-    bio: 'Benkler studies commons-based peer production, and published his seminar book. The wealth of Networks',
-    image: 'asset/vitalik.jpg',
-  },
-  {
-    name: 'Anthony Pompliano',
-    carrier: 'Director of Art Centre Nabi and a board member CC Korea',
-    bio: 'As the main venue for new media art production in Korea,Nabi promotes cross-disciplinary collaboration.',
-    image: 'asset/anthony.jpg',
-  },
-  {
-    name: 'Charlie Lee ',
-    carrier: 'Executive Diretor of the Wikimedia Foundation',
-    bio: 'Lila Tretikov is the executive Director of Wikipedia Foundation, the nonprofit organization that operates Wikipedia.',
-    image: 'asset/lee.jpg',
-  },
-  {
-    name: 'Tim Draper',
-    carrier: 'Executive Diretor of the Wikimedia Foundation',
-    bio: 'Kilnam Chon helped bring the internet to asia and is an outspoken advocate for the open web and digital commons.',
-    image: 'asset/tim.jpg',
-  },
-  {
-    name: 'Roger Ver',
-    carrier: 'President of Young Pirates of Europe',
-    bio: 'European ingetration, political democracy and participation of youth through online as her major condern.',
-    image: 'asset/roger.jpg',
-  },
-  {
-    name: 'Andreas M. Antonopoulos',
-    carrier: 'CEO of Creative, Commons, ex COO of the Mozilla Foundation',
-    bio: 'Ryan had been leading open-source projects at the Mozilla Foundation such as the open source movement',
-    image: 'asset/andreas.jpg',
-  },
-];
 
 function createSpeakers() {
   speakers.forEach((n) => {
@@ -112,9 +75,9 @@ btnClose.addEventListener('click', () => {
 
 const form = document.querySelector('#form');
 const submit = document.querySelector('.btn-submit');
-const placeholder = document.querySelector('#on-success');
 
-const update = () => {
+const feedbackHandler = () => {
+  const placeholder = document.querySelector('#on-success');
   submit.addEventListener('click', () => {
     placeholder.innerHTML = `
       <i class="bx bx-check"></i>
@@ -127,10 +90,7 @@ const update = () => {
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  update();
+  feedbackHandler();
 
-  setTimeout(() => {
-    layer.classList.remove('layer');
-    regDetails.classList.remove('off');
-  }, 4000);
+  setTimeout(() => window.location.reload(), 4000);
 });

@@ -710,7 +710,8 @@ i {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(1000%);
+  transform: translate(-50%, -50%);
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -721,11 +722,7 @@ i {
 }
 
 .register.off {
-  transform: translate(-50%, -50%);
-}
-
-.register.hide {
-  display: none;
+  display: flex;
 }
 
 .register .pop-head {
@@ -781,11 +778,6 @@ form input:focus {
   background-color: var(--accent-color);
 }
 
-.btn-submit:active {
-  background-color: var(--accent-color);
-  border: none;
-}
-
 .msg .bx {
   color: rgba(21, 216, 21, 0.856);
   font-size: 8rem;
@@ -797,18 +789,6 @@ form input:focus {
   font-weight: 400;
   color: rgba(255, 255, 255, 0.89);
   line-height: 1.7;
-}
-
-.error {
-  position: absolute;
-  width: 300px;
-  left: 9.5rem;
-  bottom: 6.5rem;
-  color: rgba(247, 122, 122, 0.76);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-align: left;
 }
 
 @media (max-width: 500px) {

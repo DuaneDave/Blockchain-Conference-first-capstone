@@ -53,7 +53,7 @@
           </li>
         </ul>
 
-        <div class="hamburger">
+        <div aria-controls="menu button" class="hamburger">
           <span class="line"></span>
           <span class="line"></span>
           <span class="line"></span>
@@ -61,12 +61,12 @@
       </nav>
 
       <div class="flex" id="layer">
-        <div class="register off flex" id="on-success">
+        <div class="register flex" id="on-success">
           <h2 class="pop-head">Register For BlockChain Global Summit 2022</h2>
           <form id="form">
-            <input type="text" placeholder="Full Name" id="fname" />
+            <input aria-label="full name" type="text" placeholder="Full Name" id="fname" />
 
-            <input type="email" placeholder="Email" id="email" />
+            <input aria-label="email" type="email" placeholder="Email" id="email" />
             <span class="error"></span>
 
             <button type="submit" class="btn-submit">Register</button>
@@ -180,6 +180,6 @@
       </div>
     </footer>
 
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
