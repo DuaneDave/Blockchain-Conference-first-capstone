@@ -3,7 +3,6 @@
 # capstone-project
 
 ![screenshot](asset/desktop.png)
-![screenshot](asset/mobile.png)
 
 ## Description the project.
 
@@ -17,6 +16,7 @@ This is the first Microverse capstone project meant to summarize all the content
 - Visual Studio Code
 - Chrome Developer Tools
 - following github flows standards.
+
 
 ## To get a local copy up and running follow these simple example steps.
 
