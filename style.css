@@ -37,15 +37,19 @@ ul {
   margin: 0;
 }
 
+h1,
+h2 {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+}
+
 /* === UTILITY CLASES === */
 .flex {
   display: flex;
 }
 
-h1,
-h2 {
-  font-family: var(--secondary-font);
-  font-weight: 700;
+.no-scroll {
+  overflow: hidden;
 }
 
 /* === HEADER === */
@@ -118,7 +122,7 @@ i {
     flex-direction: column;
     row-gap: 1rem;
     align-items: flex-start;
-    position: absolute;
+    position: fixed;
     background-color: white;
     width: 70%;
     height: 100vh;
@@ -482,12 +486,8 @@ i {
 .speakers button {
   background-color: transparent;
   padding: 0.5em 3em;
-  align-items: center;
-  justify-content: space-between;
-  column-gap: 1rem;
   font-size: 1.2rem;
   border: 2px solid black;
-  border-radius: 30px;
   margin-top: 1rem;
   color: black;
 }
@@ -801,9 +801,4 @@ form input:focus {
   color: rgb(31, 231, 31);
   font-size: 8rem;
   margin-bottom: 1rem;
-}
-
-.success {
-  color: rgb(173, 167, 167);
-  margin-bottom: 3rem;
 }
