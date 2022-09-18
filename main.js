@@ -2,25 +2,26 @@ import speakers from './obj.js';
 
 const slide = document.querySelector('.nav-menu');
 const hamburger = document.querySelector('.hamburger');
-const linkAction = document.querySelectorAll('.nav-link');
-const speakerContainer = document.querySelector('.feat-speaker');
-const showMore = document.querySelector('#show-more');
 const scrollToTop = document.querySelector('.scroll-to-top');
 
 hamburger.addEventListener('click', () => {
   slide.classList.toggle('slide');
   hamburger.classList.toggle('slide');
+  document.body.classList.toggle('no-scroll');
 });
 
+const linkAction = document.querySelectorAll('.nav-link');
 linkAction.forEach((link) => {
   link.addEventListener('click', () => {
     linkAction.forEach((link) => link.classList.remove('active'));
     link.classList.add('active');
     slide.classList.remove('slide');
     hamburger.classList.remove('slide');
+    document.body.classList.remove('no-scroll');
   });
 });
 
+const speakerContainer = document.querySelector('.feat-speaker');
 function createSpeakers() {
   speakers.forEach((n) => {
     speakerContainer.innerHTML += `
@@ -39,6 +40,7 @@ function createSpeakers() {
 
 createSpeakers();
 
+const showMore = document.querySelector('#show-more');
 showMore.addEventListener('click', (e) => {
   e.preventDefault();
   speakerContainer.classList.toggle('hide');
