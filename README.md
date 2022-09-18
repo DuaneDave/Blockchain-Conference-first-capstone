@@ -1,7 +1,6 @@
 # capstone-project
 
 ![screenshot](asset/desktop.png)
-![screenshot](asset/mobile.png)
 
 ## Description the project.
 
@@ -19,8 +18,6 @@ This is the first Microverse capstone project meant to summarize all the content
 ## Getting Started
 
 **My project works on mobile and disktop using @Media queries .**
-
----
 
 To get a local copy up and run:
 
