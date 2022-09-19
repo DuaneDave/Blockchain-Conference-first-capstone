@@ -1,6 +1,6 @@
 # capstone-project
 
-![screenshot](asset/desktop.png)
+![screenshot](asset/desktop1.png)
 
 ## Description the project.
 

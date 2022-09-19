@@ -46,9 +46,9 @@ showMore.addEventListener('click', (e) => {
   speakerContainer.classList.toggle('hide');
 
   if (!showMore.textContent.includes('Show More')) {
-    showMore.innerText = 'Show More';
+    showMore.innerHTML = 'Show More <i class="bx bx-chevron-down"></i>';
   } else {
-    showMore.innerText = 'Show Less';
+    showMore.innerHTML = 'Show Less <i class="bx bx-chevron-up"></i>';
   }
 });
 

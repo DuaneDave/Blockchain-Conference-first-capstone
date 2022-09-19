@@ -500,12 +500,6 @@ i {
   column-gap: 1rem;
   padding: 1em;
   margin: 0 auto;
-  overflow: hidden;
-  height: 327px;
-}
-
-.feat-speaker.hide {
-  height: auto;
 }
 
 .feat-card {
@@ -519,6 +513,14 @@ i {
   width: 130px;
   height: 120px;
   border-radius: 5px;
+}
+
+.feat-speaker .feat-card:nth-of-type(n+3) {
+  display: none;
+}
+
+.feat-speaker.hide .feat-card:nth-of-type(n+3) {
+  display: flex;
 }
 
 .speaker-details {
@@ -548,6 +550,10 @@ i {
     max-width: 968px;
     flex-wrap: wrap;
     height: auto;
+  }
+
+  .feat-speaker .feat-card:nth-of-type(n+3) {
+    display: flex;
   }
 
   #show-more {
